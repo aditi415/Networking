@@ -1,12 +1,16 @@
 The idea is to implement concurrency. Consider two identical copies of a piece
 of software, programmed to act as protocol processors at the data link. 
+
 We simulate their concurrent execution, using a computer with a single CPU and a language such as C. 
 
 The idea will be to share the CPU time using a round robin scheduler. The simulation program will be divided into a number of units named Strips. 
 We define strip as a routine called by the scheduler. It need not
 be named as “strip”, but could be named “DLL1” or “LAN”, or “Line1”. Each
 of the strips will be a collection of an application program, a protocol processor,
-a data link, a LAN system or a part of any one of these. In other words, one or
+a data link, a LAN system or a part of any one of these. 
+
+
+In other words, one or
 more strips will simulate a protocol processor, or other network element.
 Think of each strip as a routine being called by the main executer, which is
 the scheduler, running an endless loop. Avoid the problem of endless looping by
