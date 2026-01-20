@@ -19,6 +19,7 @@ the scheduler, running an endless loop. Avoid the problem of endless looping by
 demanding that no strip will execute more than 300 statements before exiting.
 The programmer should use only Conditional & Unconditional Statements, for
 loops
+
 There is a special strip named “connectors”. Its job is to simulate datalink
 of all kinds. Each connector merely transfers data from one strip to another.
 LLL1, LLL2 and LLL3 run identical copies of the logical link layer protocol
@@ -28,6 +29,7 @@ as TestP1-1, TestP2-1 and TestP3-1. The upper ports on the LLLs are named
 as LLL1-1, LLL2-1 and LLL3-1. The three ports below the boxes marked LLL
 are named as LLL1-2, LLL2-2 and LLL3-3. The three ports of the LAN are
 LAN-1, LAN-2 and LAN-3.
+
 Each port is an array of the form d[2][256].
 d[0][∗] represents the “out buffer” element of the port from which a connector
 may send data to some other port.
